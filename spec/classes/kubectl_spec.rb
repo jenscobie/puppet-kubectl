@@ -5,5 +5,9 @@ describe 'kubectl' do
 
   it do
     should have_exec_resource_count(1)
+
+    should contain_file('/test/boxen/bin/kubectl').with({
+      'mode'   => '0111',
+    })
   end
 end

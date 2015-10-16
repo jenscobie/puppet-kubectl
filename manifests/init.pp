@@ -13,4 +13,9 @@ class kubectl {
     command => "wget -q --timestamping -P ${boxen::config::bindir} $download_url",
     creates => "${boxen::config::bindir}/kubectl",
   }
+
+  file { "${boxen::config::bindir}/kubectl":
+    mode   => '0111',
+    require => Exec['download kubectl']
+  }
 }
