@@ -12,8 +12,6 @@ include kubectl
 ## Required Puppet Modules
 
 * `boxen`
-* `brewcask`
-* `homebrew`
 * `repository`
 * `stdlib`
 
