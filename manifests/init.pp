@@ -7,6 +7,8 @@
 
 class kubectl {
 
+  include wget
+
   $download_url = 'https://storage.googleapis.com/kubernetes-release/release/v1.0.1/bin/darwin/amd64/kubectl'
 
   exec { 'download kubectl':
